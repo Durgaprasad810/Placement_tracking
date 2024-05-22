@@ -40,45 +40,6 @@ app.get('/login', (req, res) => {
   res.render('login', { errorMessage: '' })  //this rote is for when i click login on home page it will go to login page
 })
 
-// app.post('/logind',async(req,res)=>{
-//   console.log(req.body)
-//   const details = await sinup.find({Id:req.body.Id}).exec();
-//   console.log(details)
-//   res.send(details)
-
-// })
-
-
-
-
-
-//this route is for when we enter wrong credentinals it will again redirect to same page
-// app.post('/login', async (req, res) => {
-//   const { id, password } = req.body;         
-
-//   try {
-
-//     const user = await signup.findOne({ id: id });  
-//     // console.log(user)
-//     // console.log(id,password)
-//     if (!user) {
-//       return res.render('login', { errorMessage: 'Invalid credentials. Please try again.' });
-//     }
-
-
-//     if (user.password !== password) {
-//       return res.render('login', { errorMessage: 'Invalid credentials. Please try again.' });
-//     }
-
-
-
-//     res.redirect(`/studentmo${id}`); 
-
-//   } catch (error) {
-//     console.error(error);
-//     res.render('login', { errorMessage: 'An error occurred. Please try again later.' });
-//   }
-// });
 
 
 app.post('/login', async (req, res) => {
@@ -131,7 +92,6 @@ app.post('/admin', async (req, res) => {
 });
 
 app.get('/companymo:ad_id', async (req, res) => {
-  if(req.session.user_id){
   const p = req.params;
 
   const companies = await Company.find({})
@@ -141,9 +101,7 @@ app.get('/companymo:ad_id', async (req, res) => {
 
   res.render('admindisplay', { ad_id, companies });
 }
-else{
-  res.send("first login")
-}})
+)
 
 
 
@@ -153,14 +111,13 @@ else{
 
 
 app.get('/companyDetails:ad_id', (req, res) => {
-  if(req.session.user_id){
   p = req.params
   ad_id = p.ad_id
   // console.log(p)
   // console.log(ad_id)
   // res.send('Ok')
   res.render('company', { ad_id })
-}})
+})
 
 
 app.post('/CompanyDetails:ad_id', async (req, res) => {
@@ -307,25 +264,6 @@ app.get('/deselectStudents:ad_id::com_id::id', async (req, res) => {
 })
 
 
-/////////////////////
-
-// app.get('/data',async(req,res)=>{
-
-//   let a = await Student.find()
-//   console.log(a)
-//       // Search for orders by name and within a specific date range
-//       const findResult = Student.find({
-//         cgpa: {
-//           $gte:8,
-//         },
-//       });
-//       for await (const doc of findResult) {
-//         console.log(doc);
-//       }
-//       // console.log(findResult)
-//   res.send(findResult)
-// })
-
 
 
 //signup route
@@ -334,37 +272,6 @@ app.get('/signup', (req, res) => {
   res.render('signup', { errorMessage: '' })
 })
 
-// app.post('/signupdetails', async (req, res) => {
-//   try {
-
-
-//     console.log(req.body)
-
-
-//     const user = await signup.findOne({ id: req.body.id });
-
-//     if (user) {
-//       return res.render('signup', { errorMessage: 'Your account already exists.' });
-//     }
-//     else if (req.body.password.length < 8) {
-//       res.render('signup', { errorMessage: 'Password must me more than 8 charhacters' });
-//     }
-//     else if (req.body.password === req.body.confirmpassword) {
-//       const loginData = new signup(req.body);
-//       await loginData.save()
-//       res.status(201).render('student');
-
-//     }
-//     else {
-
-//       res.render('signup', { errorMessage: 'Password donot macth' });
-
-//     }
-//   } catch (error) {
-//     console.log(error)
-//     res.status(500).send('Error saving data');
-//   }
-// })
 
 
 
