@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>applied Students Company</title>
+    <link rel="stylesheet" href="displayCompany1.css">
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <a href="/companymo<%= ad_id %>">All Companies</a>
+        <a href="/companyDetails<%=ad_id%>">Add Companies</a>
+        <a href="#">Status</a>
+
+
+    </div>
+    <h1>Applied Students</h1>
+    <h1>
+        <%=company.companyName %>
+    </h1>
+    <div class="main-content">
+        <a href="/selectedStudents<%= ad_id %>:<%= company._id %>"><button class="button-24" role="button">Selected Students</button></a>
+        <div class="box-container">
+            <%for(let i=0;i<res1.length;i++){%>
+                <div class="container">
+                    <div class="info">
+                        <strong>Student Name:</strong>
+                        <%=res1[i].name%>
+                    </div>
+                    <div class="info">
+                        <strong>Id:</strong>
+                        <%=res1[i].id%>
+                    </div>
+                    <div class="info">
+                        <strong>Skills:</strong>
+                        <%=res1[i].skills%>
+                    </div>
+                    <div class="info">
+                        <strong>CGPA:</strong>
+                        <%=res1[i].cgpa%>
+                    </div>
+                    <div class="info">
+                        <strong>Backlogs:</strong>
+                        <%=res1[i].backlogs%>
+                    </div>
+                    <a href="/selectedStudents<%= ad_id %>:<%= company._id %>:<%=res1[i].id%>"><button class="button-24" role="button">Select</button></a>
+                </div>
+                    <% } %>
+                
+        </div>
+    </div>
+</body>
+
+</html>

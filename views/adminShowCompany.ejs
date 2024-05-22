@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Details of company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ff0000;
+            overflow-x: hidden;
+            padding-top: 20px;
+            color: #fff;
+        }
+        
+        .sidenav img {
+            display: block;
+            margin: 0 auto;
+            width: 150px; 
+            border-radius: 50%; 
+            margin-bottom: 20px;
+        }
+        
+        .sidenav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff; 
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .sidenav a:hover {
+            background-color: #fff;
+            color: #ff0000; 
+        }
+        
+        .sidenav h2 {
+            color: #fff; 
+            padding: 10px 15px;
+            margin: 0;
+        }
+        
+        .logout {
+            background-color: #fff; 
+            color: #ff0000; 
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .main-content {
+            margin-left: 250px; 
+            padding: 20px;
+            
+        }
+        
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .container {
+            /* width: calc(33.33% - 20px); */
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            box-sizing: border-box; 
+            min-width: 400px;
+        
+        }
+        
+        .container {
+            margin: auto; 
+        }
+        
+        /* .container {
+            margin-right: 0; 
+        } */
+        
+        .info {
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .button-24 {
+            background: #FF4742;
+            border: 1px solid #FF4742;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height:40px;
+            outline: 0;
+            padding: 9px 11px;
+            
+            vertical-align: middle;
+        }
+        
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+        
+        .button-24:active {
+            opacity: .5;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(53, 79, 192);
+        }
+        a:hover{
+            color: #FF4742;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <a href="/companymo<%= ad_id %>">All Companies</a>
+        <a href="/companyDetails<%=ad_id%>">Add Companies</a>
+        <a href="#">Status</a>
+        <button class="logout">Log Out</button>
+    </div>
+    <div class="box-container"></div>
+    <% for (let i = 0; i < companies.length; i++) { %>
+        <div class="container">
+            <div class="info">
+                <strong>Company Name:</strong>
+                <%= companies[i].companyName %>
+            </div>
+            <div class="info">
+                <strong>Role:</strong>
+                <%= companies[i].role %>
+            </div>
+            <div class="info">
+                <strong>Qualifications Required:</strong>
+                <%= companies[i].qualificationsRequired %>
+            </div>
+            <div class="info">
+                <strong>Salary:</strong>
+                <%= companies[i].salary %>
+            </div>
+            <div class="info">
+                <strong>Location:</strong>
+                <%= companies[i].location %>
+            </div>
+            <div class="info">
+                <strong>Application Deadline:</strong>
+                <%= companies[i].applicationDeadline.toDateString() %>
+            </div>
+            <div class="info">
+                <strong>Max Backlogs:</strong> 
+                <%= companies[i].maxbacklogs %>
+            </div>
+            <div class="info">
+                <strong>Job Description:</strong>
+                <%= companies[i].jobDescription %>
+            </div>
+            <div class="info">
+                <strong>Website:</strong>
+                <a href="<%= companies[i].website %>" target="_blank">
+                    <%= companies[i].companyName %>link
+                </a>
+            </div>
+            <div class="info">
+                <strong>Contact Email:</strong>
+                <%= companies[i].contactEmail %>
+            </div>
+            <div class="info">
+                <strong>Contact Phone:</strong>
+                <%= companies[i].contactPhone %>
+            </div>
+            <div class="info">
+                <strong>Additional Info:</strong>
+                <%= companies[i].additionalInfo %>
+            </div>
+            <a href="/appliedStudents<%= ad_id %>:<%= companies[i]._id %>"><button class="button-24" role="button">Applied Students </button></a>
+            <a href="/adminEditCompany<%= ad_id %>:<%= companies[i]._id %>"><button class="button-24" role="button">Edit ></button></a>
+
+        </div>
+
+    <% } %>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <a href="/homepage">Home</a>
+        <a href="/login">Login</a>
+        <a href="#">Admin</a>
+    </div>
+
+    <div class="signup">
+        <div class="right">
+            <form action="/signupdetails" method="post">
+                <img src="/VJIT_logo.png" alt="">
+                <div class="log_txt">Sign up</div>
+                <div class="personal_info">
+                    <div class="username">Username <br><input type="text" id="username" name="username" required></div>
+                    <div class="id">ID <br><input type="text" id="text" name="id" required></div>
+                    <div class="password">Password <br><input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="confirmpassword">Confirm Password <br><input type="password" id="confirmpassword" name="confirmpassword" required></div>
+                    <button class="button" type="submit">Signup</button>
+
+            </form>
+        </div>
+        <div id="errorMessages" class="error-messages">
+            <% if(errorMessage) { %>
+                <p class="error-message">
+                    <%= errorMessage %>
+                </p>
+                <% } %>
+        </div>
+        <div class="sinin">
+            <h1>Do you have an account ?<a href="/login">Login</a></h1>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

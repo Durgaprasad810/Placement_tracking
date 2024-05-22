@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company details</title>
+    <link rel="stylesheet" href="/student.css">
+</head>
+<body>
+
+<div class="sidenav">
+    <img src="VJIT_ph.png" alt="Profile Image"> 
+    <a href="/companymo<%= ad_id%>">All Companies</a>  
+    <a href="#">Add Companies</a>  
+    <a href="#">Status</a>    
+    
+</div>
+
+<div style="margin-left: 250px; padding: 20px;">
+    <div class="container">
+        <h1>Company details</h1>
+        <form action="http://localhost:3000/companydetails<%=ad_id%>" method="POST">
+            <div class="form-group">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" required>
+            </div>
+            <div class="form-group">
+                <label for="qualificationsRequired">Qualifications Required:</label>
+                <input type="text" id="qualificationsRequired" name="qualificationsRequired" required>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary" name="salary" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="applicationDeadline">Application Deadline:</label>
+                <input type="date" id="applicationDeadline" name="applicationDeadline" required>
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website">
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Contact Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail">
+            </div>
+            <div class="form-group">
+                <label for="contactPhone">Contact Phone:</label>
+                <input type="tel" id="contactPhone" name="contactPhone">
+            </div>
+            <div class="form-group">
+                <label for="additionalInfo">Additional Info:</label>
+                <textarea id="additionalInfo" name="additionalInfo"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="maxbacklogs">Maxbacklogs:</label>
+                <input type="number" id="maxbacklogs" name="maxbacklogs" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

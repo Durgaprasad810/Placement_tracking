@@ -1,0 +1,156 @@
+body {
+    background-color: #d3d9fa;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ff0000; 
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #fff; 
+}
+
+.sidenav img {
+    display: block;
+    margin: 0 auto;
+    width: 150px; 
+    border-radius: 50%; 
+    margin-bottom: 20px;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sidenav a:hover {
+    background-color: #fff; 
+    color: #ff0000; 
+}
+
+.sidenav h2 {
+    color: #fff; 
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.logout {
+    background-color: #fff; 
+    color: #ff0000; 
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.left img{
+    width: 600px;
+    height: 400px;
+}
+
+/* .right{
+    margin: auto;
+} */
+ .right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:  auto;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    max-width: 800px;
+    height: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+
+
+.log_txt {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #40424f;
+    font-weight: 600;
+}
+
+.personal_info {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #d8cccc;
+    border-radius: 6px;
+    margin: 8px 0;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:hover {
+    border-color: #f2a6a5;
+}
+
+
+.password,
+.email {
+    margin-top: 12px;
+}
+
+button {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff0000;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #de3838;
+}
+
+.signup h1{
+font-size: medium;
+font-weight: 100;
+}

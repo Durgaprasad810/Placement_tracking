@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="/student copy.css">
+    
+</head>
+<body>
+
+<div class="sidenav">
+    <img src="VJIT_ph.png" alt="Profile Image"> 
+    <a href="">Profile</a>   
+    <a href="/studentmo<%= stu_id %>">All Companies</a>   
+    <a href="/appliedcompanies<%= stu_id %>">Applied Companies</a>
+    <a href="#">Status</a>
+</div>
+
+<div style="margin-left: 250px; padding: 20px;">
+    <div class="container">
+        <h1>Student details</h1>
+        <form action="/editprofile<%= stu_id %>" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required value="<%=student.name%>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required value="<%= student.id %>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value = "<%=student.age%>" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills :</label>
+                <%let skills = ""%>
+                <%for(let i=0;i<student.skills.length;i++){%>
+                    <%skills = skills+" "+student.skills[i]%>
+                   <%}%> 
+                <textarea id="skills" name="skills" rows="4" cols="50"  required><%= skills %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= student.email %>">
+            </div>
+            <div class="form-group">
+                <label for="phNo">Phone Number:</label>
+                <input type="tel" id="phNo" name="phNo" value="<%= student.phNo %>">
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" value="<%= student.branch %>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cgpa">CGPA:</label>
+                <input type="number" id="cgpa" name="cgpa" step="any" value="<%= student.cgpa %>"  required>
+            </div>
+            <div class="form-group">
+                <label for="backlogs">backlogs:</label>
+                <input type="number" id="backlogs" name="backlogs" value="<%= student.backlogs %>" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+</body>
+</html>

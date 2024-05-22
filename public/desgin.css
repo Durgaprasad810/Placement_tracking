@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ff0000;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.sidenav img {
+    display: block;
+    margin: 0 auto;
+    width: 150px; 
+    border-radius: 50%; 
+    margin-bottom: 20px;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sidenav a:hover {
+    background-color: #fff;
+    color: #ff0000; 
+}
+
+.sidenav h2 {
+    color: #fff; 
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.logout {
+    background-color: #fff; 
+    color: #ff0000; 
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.main-content {
+    margin-left: 250px; 
+    padding: 20px;
+    
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container {
+    /* width: calc(33.33% - 20px); */
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    box-sizing: border-box; 
+    min-width: 400px;
+
+}
+
+.container {
+    margin: auto; 
+}
+
+/* .container {
+    margin-right: 0; 
+} */
+
+.info {
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-24 {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height:40px;
+    outline: 0;
+    padding: 9px 11px;
+    
+    vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.button-24:active {
+    opacity: .5;
+}
+a{
+    text-decoration: none;
+    color: rgb(53, 79, 192);
+}
+a:hover{
+    color: #FF4742;
+}

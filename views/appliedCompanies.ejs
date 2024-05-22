@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>applied Companies</title>
+    <link rel="stylesheet" href="displayCompany1.css">
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <a href="/editprofile<%=stu_id %>">Profile</a>
+        <a href="/studentmo<%= stu_id %>">All Companies </a> 
+        <a href="#">Applied Companies </a> 
+        <a href="#">Status</a>
+
+
+    </div>
+    <h1>Applied Companies</h1>
+    <h1>
+      
+    </h1>
+
+
+    <div class="main-content">
+        <div class="box-container">
+        
+            <%for(let i=0;i<comData.length;i++){%>
+                <div class="container">
+                    <div class="info">
+                        <strong>Company Name:</strong>
+                        <%=comData[i].companyName%>
+                    </div>
+                    <div class="info">
+                        <strong>Salary:</strong>
+                        <%=comData[i].salary%>
+                    </div>
+                    <div class="info">
+                        <strong>Role:</strong>
+                        <%=comData[i].role%>
+                    </div>
+                    <div class="info">
+                        <strong>Location:</strong>
+                        <%=comData[i].location%>
+                    </div>
+                
+                </div>
+                    <% } %>
+                
+        </div>
+    </div>
+</body>
+
+</html>

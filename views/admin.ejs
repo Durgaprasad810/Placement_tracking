@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <!-- <a href="../views/student.ejs"></a> -->
+        <a href="/homepage">Home</a>
+        <a href="/login">Student Login</a>
+        <a href="#">Admin</a>
+
+    </div>
+
+    <div class="login">
+        <div class="right">
+            <form action="/admin" method="post">
+                <img src="/VJIT_logo.png" alt="">
+                <div class="log_txt">Login</div>
+                <div class="personal_info">
+                    <div class="id">ID <br><input type="text" id="text" name="id" required ></div>
+                    <div class="password">Password <br><input type="password" id="password" name="password" required>
+                    </div>
+                    <button class="button" type="submit">Login</button>
+                </div>
+                <div id="errorMessages" class="error-messages">
+                    <% if(errorMessage) { %>
+                        <p class="error-message">
+                            <%= errorMessage %>
+                        </p>
+                        <% } %>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>companyDetails</title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <img src="VJIT_ph.png" alt="Profile Image">
+        <a href="/homepage">Home</a>
+        <a href="#">Profile</a>
+        <a href="">All recruiter</a>
+        <!-- ekkada connection ravtam le all recuters-->
+        <button class="logout">Log Out</button>
+    </div>
+
+    <div class="main-content">
+        <div class="box-container">
+            <%=companies%>
+            <% for (let i=0; i < companies.length; i++) { %>
+                <div class="container">
+                    <div class="info">
+                        <strong>Company Name:</strong>
+                        <%= companies[i].companyName %>
+                    </div>
+                    <div class="info">
+                        <strong>Role:</strong>
+                        <%= companies[i].role %>
+                    </div>
+                    <div class="info">
+                        <strong>Qualifications Required:</strong>
+                        <%= companies[i].qualificationsRequired %>
+                    </div>
+                    <div class="info">
+                        <strong>Salary:</strong>
+                        <%= companies[i].salary %>
+                    </div>
+                    <div class="info">
+                        <strong>Location:</strong>
+                        <%= companies[i].location %>
+                    </div>
+                    <div class="info">
+                        <strong>Application Deadline:</strong>
+                        <%= companies[i].applicationDeadline.toDateString() %>
+                    </div>
+                    <div class="info">
+                        <strong>Max Backlogs:</strong> 
+                        <%= companies[i].maxbacklogs %>
+                    </div>
+                    <div class="info">
+                        <strong>Job Description:</strong>
+                        <%= companies[i].jobDescription %>
+                    </div>
+                    <div class="info">
+                        <strong>Website:</strong>
+                        <a href="<%= companies[i].website %>" target="_blank">
+                            <%= companies[i].companyName %>link
+                        </a>
+                    </div>
+                    <div class="info">
+                        <strong>Contact Email:</strong>
+                        <%= companies[i].contactEmail %>
+                    </div>
+                    <div class="info">
+                        <strong>Contact Phone:</strong>
+                        <%= companies[i].contactPhone %>
+                    </div>
+                    <div class="info">
+                        <strong>Additional Info:</strong>
+                        <%= companies[i].additionalInfo %>
+                    </div>
+    
+                   
+                    <a href="/applycompany"><button class="button-24" role="button">Apply</button></a>
+                </div>
+                <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
